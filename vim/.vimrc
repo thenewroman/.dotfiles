@@ -1,5 +1,7 @@
 vim9script
 
+set spell
+
 #Plugins
 plug#begin()
 Plug 'joshdick/onedark.vim'
@@ -8,6 +10,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'raimondi/delimitmate'
 plug#end()
 
 # Colorscheme
@@ -49,6 +59,47 @@ g:NERDTreeShowHidden = 1
 g:NERDTreeNodeDelimiter = "\x07"
 g:NERDTreeMinimalUI = 1
 g:NERDTreeWinSize = 20
+g:NERDTreeIgnore = ['\.git$']
+
+# Status Line
+set noshowmode
+g:airline#extensions#branch#custom_head = 'gitbranch#name'
+
+# Line break
+set breakindent
+set wrap
+set linebreak
+set showbreak=\ \ ﬌\
+set textwidth=80
+set wrapmargin=80
+set backspace=indent,eol,start
+
+# CtrlP
+g:ctrlp_custom_ignore = {
+    'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+    'file': '\.so$\|\.dat$|\.DS_Store$'
+    }
+
+# DelimitMate
+g:delimitMate_expand_cr = 1
+g:delimitMate_expand_space = 1
+
+# Windows
+set splitbelow splitright
+set diffopt+=vertical
+set showtabline=0
+set scrolloff=4
+set foldmethod=indent
+set foldcolumn=0
+set foldlevel=99
+set formatoptions=qrn1]jtc
+set signcolumn=auto
+
+# Search
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
 
 # Disable keys
 map <Up> <Nop>
@@ -69,4 +120,4 @@ imap <PageUp> <Nop>
 imap <PageDown> <Nop>
 
 # Mappings
-nnoremap <LEADER>n :NERDTreeToggle<CR>
+map <LEADER>n :NERDTreeToggle<CR>
