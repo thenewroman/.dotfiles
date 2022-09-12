@@ -1,0 +1,12 @@
+include /usr/share/taskwarrior/holidays.en-US.rc
+#include ~/.config/task/custom.theme
+editor=vim
+color=1
+fontunderline=1
+data.location=~/.config/task
+verbose=0
+report.next.columns=id,description.truncated_count,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining
+report.next.labels=ID,Description,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until
+report.next.sort=due+
+report.all.sort=due+
+news.version=2.6.0
