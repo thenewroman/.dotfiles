@@ -1,0 +1,17 @@
+[user]
+	email = castro@linux.com
+	name = Castro
+
+[credential]
+	helper = store
+
+[alias]
+	log2 = log --pretty='%C(yellow)%h %C(bold white)%s %C(auto)%d %C(cyan)%ad ' --date=relative --date-order --graph
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[core]
+	editor = vim
+[init]
+	defaultBranch = master
