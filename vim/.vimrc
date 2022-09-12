@@ -4,6 +4,10 @@ vim9script
 plug#begin()
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 plug#end()
 
 # Colorscheme
@@ -38,6 +42,14 @@ set expandtab
 set autoindent
 set smartindent
 
+# NERDTree
+g:NERDTreeDirArrowExpandable = ''
+g:NERDTreeDirArrowCollapsible = ''
+g:NERDTreeShowHidden = 1
+g:NERDTreeNodeDelimiter = "\x07"
+g:NERDTreeMinimalUI = 1
+g:NERDTreeWinSize = 20
+
 # Disable keys
 map <Up> <Nop>
 map <Down> <Nop>
@@ -55,3 +67,6 @@ imap <Home> <Nop>
 imap <End> <Nop>
 imap <PageUp> <Nop>
 imap <PageDown> <Nop>
+
+# Mappings
+nnoremap <LEADER>n :NERDTreeToggle<CR>
