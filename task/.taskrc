@@ -1,5 +1,5 @@
 include /usr/share/taskwarrior/holidays.en-US.rc
-#include ~/.config/task/custom.theme
+include ~/.config/task/custom.theme
 editor=vim
 color=1
 fontunderline=1
@@ -9,4 +9,5 @@ report.next.columns=id,description.truncated_count,start.age,entry.age,depends,p
 report.next.labels=ID,Description,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until
 report.next.sort=due+
 report.all.sort=due+
+default.project=Inbox
 news.version=2.6.0
