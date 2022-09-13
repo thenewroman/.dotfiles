@@ -63,7 +63,6 @@ g:NERDTreeIgnore = ['\.git$']
 
 # Status Line
 set noshowmode
-g:airline#extensions#branch#custom_head = 'gitbranch#name'
 
 # Line break
 set breakindent
